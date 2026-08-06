@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import applogo from "../image/AcadFlow-icon.png";
+import applogo from "../image/AcadFlow-Icon.png";
 import axios from "axios";
 import "../components/ViewStudentModal.css";
 
