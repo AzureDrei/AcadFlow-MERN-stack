@@ -10,7 +10,7 @@ const ViewStudentModal = ({ studentId, onClose, refreshStudents }) => {
     const fetchStudent = async () => {
       try {
         const getStudent = await axios.get(
-          `http://localhost:3000/students/${studentId}`,
+          `https://acadflow-backend-zy4z.onrender.com/students/${studentId}`,
         );
 
         setStudent(getStudent.data);
@@ -25,7 +25,9 @@ const ViewStudentModal = ({ studentId, onClose, refreshStudents }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getSubjects = await axios.get("http://localhost:3000/subjects");
+        const getSubjects = await axios.get(
+          "https://acadflow-backend-zy4z.onrender.com/subjects",
+        );
         setSubjects(getSubjects.data);
       } catch (error) {
         console.log(error.message);
@@ -44,11 +46,14 @@ const ViewStudentModal = ({ studentId, onClose, refreshStudents }) => {
   );
 
   const dropSubject = async (subjectId) => {
-    await axios.delete(`http://localhost:3000/enroll/${student.studentId}`, {
-      data: {
-        subjectId,
+    await axios.delete(
+      `https://acadflow-backend-zy4z.onrender.com/enroll/${student.studentId}`,
+      {
+        data: {
+          subjectId,
+        },
       },
-    });
+    );
     refreshStudents();
   };
 

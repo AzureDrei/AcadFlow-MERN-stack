@@ -9,12 +9,15 @@ const EditSubjectModal = ({ subject, onClose, refreshSubjects }) => {
   const [end, setEnd] = useState(subject.end);
 
   const updateSubject = async () => {
-    await axios.put(`http://localhost:3000/subjects/${subject.subjectId}`, {
-      subjectName,
-      day,
-      start,
-      end,
-    });
+    await axios.put(
+      `https://acadflow-backend-zy4z.onrender.com/subjects/${subject.subjectId}`,
+      {
+        subjectName,
+        day,
+        start,
+        end,
+      },
+    );
     refreshSubjects();
   };
 

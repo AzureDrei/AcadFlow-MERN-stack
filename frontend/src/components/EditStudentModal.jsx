@@ -9,11 +9,14 @@ const EditStudentModal = ({ students, onClose, refreshStudents }) => {
   const [course, setCourse] = useState(students.course);
 
   const updateStudent = async () => {
-    await axios.put(`http://localhost:3000/students/${students.studentId}`, {
-      firstName,
-      lastName,
-      course,
-    });
+    await axios.put(
+      `https://acadflow-backend-zy4z.onrender.com/students/${students.studentId}`,
+      {
+        firstName,
+        lastName,
+        course,
+      },
+    );
     refreshStudents();
   };
 

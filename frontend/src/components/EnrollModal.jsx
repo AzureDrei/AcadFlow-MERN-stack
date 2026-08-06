@@ -13,7 +13,9 @@ const EnrollModal = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getData = await axios.get("http://localhost:3000/subjects");
+        const getData = await axios.get(
+          "https://acadflow-backend-zy4z.onrender.com/subjects",
+        );
         setSubjects(getData.data);
       } catch (error) {
         console.log(error.message);
@@ -25,7 +27,7 @@ const EnrollModal = () => {
   const findStudentInfo = async () => {
     try {
       const getStudent = await axios.get(
-        `http://localhost:3000/students/${findStudent}`,
+        `https://acadflow-backend-zy4z.onrender.com/students/${findStudent}`,
       );
       setStudent(getStudent.data);
     } catch (error) {
@@ -63,18 +65,24 @@ const EnrollModal = () => {
   );
 
   const handleSubject = async (subjectId) => {
-    await axios.post(`http://localhost:3000/enroll/${student.studentId}`, {
-      subjectId,
-    });
+    await axios.post(
+      `https://acadflow-backend-zy4z.onrender.com/enroll/${student.studentId}`,
+      {
+        subjectId,
+      },
+    );
     await findStudentInfo();
   };
 
   const dropSubject = async (subjectId) => {
-    await axios.delete(`http://localhost:3000/enroll/${student.studentId}`, {
-      data: {
-        subjectId,
+    await axios.delete(
+      `https://acadflow-backend-zy4z.onrender.com/enroll/${student.studentId}`,
+      {
+        data: {
+          subjectId,
+        },
       },
-    });
+    );
     await findStudentInfo();
   };
 

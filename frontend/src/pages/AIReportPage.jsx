@@ -11,7 +11,9 @@ const AIReportPage = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post("http://localhost:3000/aireport");
+      const response = await axios.post(
+        "https://acadflow-backend-zy4z.onrender.com/aireport",
+      );
 
       setReport(response.data);
     } catch (error) {

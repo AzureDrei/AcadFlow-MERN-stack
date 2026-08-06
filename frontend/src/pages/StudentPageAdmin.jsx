@@ -15,7 +15,9 @@ const StudentPageAdmin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getData = await axios.get("http://localhost:3000/students");
+        const getData = await axios.get(
+          "https://acadflow-backend-zy4z.onrender.com/students",
+        );
         setStudents(getData.data);
       } catch (error) {
         console.log(error.message);
@@ -26,7 +28,9 @@ const StudentPageAdmin = () => {
 
   const fetchStudents = async () => {
     try {
-      const getData = await axios.get("http://localhost:3000/students");
+      const getData = await axios.get(
+        "https://acadflow-backend-zy4z.onrender.com/students",
+      );
       setStudents(getData.data);
     } catch (error) {
       console.log(error.message);
@@ -38,7 +42,9 @@ const StudentPageAdmin = () => {
   }, []);
 
   const deleteStudent = async (studentId) => {
-    await axios.delete(`http://localhost:3000/students/${studentId}`);
+    await axios.delete(
+      `https://acadflow-backend-zy4z.onrender.com/students/${studentId}`,
+    );
     fetchStudents();
   };
 

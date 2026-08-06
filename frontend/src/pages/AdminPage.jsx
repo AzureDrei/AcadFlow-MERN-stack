@@ -10,7 +10,9 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const getStudent = await axios.get(`http://localhost:3000/students/`);
+        const getStudent = await axios.get(
+          `https://acadflow-backend-zy4z.onrender.com/students/`,
+        );
 
         setStudents(getStudent.data);
       } catch (error) {
@@ -24,7 +26,9 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getSubjects = await axios.get("http://localhost:3000/subjects");
+        const getSubjects = await axios.get(
+          "https://acadflow-backend-zy4z.onrender.com/subjects",
+        );
         setSubjects(getSubjects.data);
       } catch (error) {
         console.log(error.message);

@@ -9,7 +9,7 @@ const ViewSubjectsModal = ({ subjectId, onClose }) => {
     const fetchData = async () => {
       try {
         const getSubjects = await axios.get(
-          `http://localhost:3000/subjects/${subjectId}`,
+          `https://acadflow-backend-zy4z.onrender.com/subjects/${subjectId}`,
         );
         setSubject(getSubjects.data);
       } catch (error) {
@@ -22,7 +22,9 @@ const ViewSubjectsModal = ({ subjectId, onClose }) => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const getStudent = await axios.get(`http://localhost:3000/students/`);
+        const getStudent = await axios.get(
+          `https://acadflow-backend-zy4z.onrender.com/students/`,
+        );
 
         console.log(getStudent.data);
         setStudents(getStudent.data);

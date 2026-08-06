@@ -15,7 +15,9 @@ const SubjectPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getData = await axios.get("http://localhost:3000/students");
+        const getData = await axios.get(
+          "https://acadflow-backend-zy4z.onrender.com/students",
+        );
         setStudents(getData.data);
       } catch (error) {
         console.log(error.message);
@@ -27,7 +29,9 @@ const SubjectPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const getData = await axios.get("http://localhost:3000/subjects");
+        const getData = await axios.get(
+          "https://acadflow-backend-zy4z.onrender.com/subjects",
+        );
         setSubjects(getData.data);
       } catch (error) {
         console.log(error.message);
@@ -38,7 +42,9 @@ const SubjectPage = () => {
 
   const fetchSubjects = async () => {
     try {
-      const getData = await axios.get("http://localhost:3000/subjects");
+      const getData = await axios.get(
+        "https://acadflow-backend-zy4z.onrender.com/subjects",
+      );
       setSubjects(getData.data);
     } catch (error) {
       console.log(error.message);
@@ -50,7 +56,9 @@ const SubjectPage = () => {
   }, []);
 
   const deleteSubjects = async (subjectId) => {
-    await axios.delete(`http://localhost:3000/subjects/${subjectId}`);
+    await axios.delete(
+      `https://acadflow-backend-zy4z.onrender.com/subjects/${subjectId}`,
+    );
     fetchSubjects();
   };
 

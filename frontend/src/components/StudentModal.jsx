@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Modal.css";
 import "./StudentModal.css";
 
-const StudentModal = ({refreshStudents}) => {
+const StudentModal = ({ refreshStudents }) => {
   const [showModal, setShowModal] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -12,7 +12,7 @@ const StudentModal = ({refreshStudents}) => {
 
   const addStudentName = async () => {
     try {
-      await axios.post("http://localhost:3000/students", {
+      await axios.post("https://acadflow-backend-zy4z.onrender.com/students", {
         firstName,
         lastName,
         course,

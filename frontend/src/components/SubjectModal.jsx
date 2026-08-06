@@ -10,7 +10,7 @@ const SubjectModal = ({ refreshSubjects }) => {
 
   const addSubjectName = async () => {
     try {
-      await axios.post("http://localhost:3000/subjects", {
+      await axios.post("https://acadflow-backend-zy4z.onrender.com/subjects", {
         subjectName,
         day,
         start,
@@ -84,11 +84,11 @@ const SubjectModal = ({ refreshSubjects }) => {
                     <option value="10:00">10:00AM</option>
                     <option value="11:00">11:00AM</option>
                     <option value="12:00">12:00AM</option>
-                    <option value="1:00">1:00PM</option>
-                    <option value="2:00">2:00PM</option>
-                    <option value="3:00">3:00PM</option>
-                    <option value="4:00">4:00PM</option>
-                    <option value="5:00">5:00PM</option>
+                    <option value="13:00">13:00PM</option>
+                    <option value="14:00">14:00PM</option>
+                    <option value="15:00">15:00PM</option>
+                    <option value="16:00">16:00PM</option>
+                    <option value="17:00">17:00PM</option>
                   </select>
                 </div>
 
@@ -106,11 +106,11 @@ const SubjectModal = ({ refreshSubjects }) => {
                     <option value="10:00">10:00AM</option>
                     <option value="11:00">11:00AM</option>
                     <option value="12:00">12:00AM</option>
-                    <option value="1:00">1:00PM</option>
-                    <option value="2:00">2:00PM</option>
-                    <option value="3:00">3:00PM</option>
-                    <option value="4:00">4:00PM</option>
-                    <option value="5:00">5:00PM</option>
+                    <option value="13:00">13:00PM</option>
+                    <option value="14:00">14:00PM</option>
+                    <option value="15:00">15:00PM</option>
+                    <option value="16:00">16:00PM</option>
+                    <option value="17:00">17:00PM</option>
                   </select>
                 </div>
               </div>

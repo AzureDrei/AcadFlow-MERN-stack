@@ -15,10 +15,13 @@ const LoginPage = () => {
     e.preventDefault();
     console.log("Login clicked");
 
-    const response = await axios.post("http://localhost:3000/login", {
-      username,
-      password,
-    });
+    const response = await axios.post(
+      "https://acadflow-backend-zy4z.onrender.com/login",
+      {
+        username,
+        password,
+      },
+    );
 
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("studentId", response.data.studentId);
