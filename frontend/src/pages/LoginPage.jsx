@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import applogo from "../image/AcadFlow-icon.png";
+import applogo from "../image/AcadFlow-Icon.png";
 
 import "./LoginPage.css";
 
