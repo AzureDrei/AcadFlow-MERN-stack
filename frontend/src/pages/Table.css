@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-font: "Manrope", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+}
+
+.table-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+/* Header .table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.table-header h2 {
+  font-family: "Manrope";
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.table-header p {
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.add-student-btn:hover {
+  background: #1d4ed8;
+} */
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.page-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page-table thead {
+  background: #f8fafc;
+}
+
+.page-table th {
+  padding: 15px;
+  text-align: left;
+  color: #64748b;
+  font-family: "Manrope";
+  font-size: 0.9rem;
+}
+
+.page-table td {
+  padding: 18px 18px;
+  border-top: 1px solid #e2e8f0;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+}
+
+.page-table tbody tr {
+  transition: 0.25s;
+}
+
+.page-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.student-id {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn {
+  background: #eef4ff;
+  border: 1px solid #d6e4ff;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+.delete-btn {
+  background: #fff1f2;
+  color: #ef4444;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .table-header {
+    grid-template-columns: 1fr;
+  }
+}

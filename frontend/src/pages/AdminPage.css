@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-font: "Manrope", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+  --secondary-font-size: 0.95rem;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+  border-radius: 1rem;
+}
+
+.welcome-banner h1 {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-banner p {
+  font-family: var(--secondary-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.welcome-banner span {
+  display: block;
+  margin-top: 0.4rem;
+  opacity: 0.9;
+}
+
+/*-----------------CARDS-------------------*/
+
+.stat-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  transition: 0.25s;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stat-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 18px;
+}
+
+.stat-icon-subject {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6f2e8;
+  color: #398946;
+  border-radius: 18px;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-family: var(--secondary-font);
+  font-size: var(--secondary-font-size);
+  color: #64748b;
+}
+
+.stat-card h2 {
+  font-family: var(--main-font);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0.3rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-header button {
+  background: #f3f5fa;
+  color: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card-header button:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.card-body {
+  font-family: "Inter";
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* --------------- student side -------------*/
+.student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  transition: 0.25s;
+}
+
+.student-item:hover {
+  background: #f8fbff;
+}
+
+.student-item h3,
+.subject-item h3 {
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+}
+
+.student-item p,
+.subject-item p {
+  font-family: var(--secondary-font);
+  color: #8b8b8b;
+  font-size: 0.8rem;
+}
+
+.student-item span {
+  font-family: "Inter";
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ----------------------- subject --------------*/
+
+.subject-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  transition: 0.25s;
+}
+
+/* -------------------days badge -------------- */
+
+.day {
+  background: #dff6e8;
+  color: #18834b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+.day.tuesday {
+  background: #efe4ff;
+  color: #7a32d4;
+}
+
+.day.friday {
+  background: #fff0d5;
+  color: #d97706;
+}
+
+/* -------------student avatar -------------------*/
+
+.student-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.student-avatar {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--main-font);
+}

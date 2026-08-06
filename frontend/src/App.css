@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: "Manrope", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+  --secondary-font-size: 0.95rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.small-text {
+  font-family: "Inter", sans-serif;
+}
+
+/* -----------------header -------------*/
+
+.header {
+  height: 80px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.menu-btn {
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  padding-left: 1.5rem;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.content {
+  width: 100%;
+}
+
+button {
+  background-color: lightblue;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 14px;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.second-line {
+  font-size: 0.9rem;
+}
+
+.bottom-item,
+.bottom-item-student {
+  position: absolute;
+  bottom: 3rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+/* ------------admin page------------------ */
+.info-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.adminpage-card {
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.info-table {
+  background-color: white;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+.adminpage-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+button:disabled {
+  background-color: grey;
+  text-decoration: line-through;
+}
+
+.input-style {
+  background-color: lightgray;
+  width: auto;
+  margin-right: 1rem;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.subjects {
+  margin-bottom: 1rem;
+}
+
+.button-enroll {
+  margin-left: 1rem;
+}
+
+/* ------------------student-page-------------- */
+.layout {
+  padding: 5rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr !important;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-format {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .layout {
+    padding: 2rem;
+  }
+
+  .adminpage-table {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .info-table {
+    width: 100%;
+  }
+  .bottom-item {
+    position: static;
+    background-color: #f8f8f8;
+  }
+
+  .bottom-item-student {
+    position: absolute;
+    bottom: 1rem;
+  }
+}

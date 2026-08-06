@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h2 {
+  font-size: 20px;
+  padding-bottom: 1rem;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
