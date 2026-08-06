@@ -7,14 +7,17 @@ import enrollRoutes from "./routes/enrollRoutes.js";
 import login from "./routes/authRoutes.js";
 import AIReport from "./routes/aiRoutes.js";
 import cors from "cors";
+import helmet from "helmet";
 
 dotenv.config();
 connectDB();
 
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(helmet());
 app.use(express.json());
 app.use("/login", login);
 app.use("/students", studentRoutes);
